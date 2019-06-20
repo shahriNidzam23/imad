@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+      <ion-title>
+        IMAD
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide *ngFor="let alph of slides">
+        <ion-grid>
+            <ion-row *ngFor="let img of alph">
+              <ion-col *ngFor="let item of img">
+                  <ion-card [routerLink]="item.url">
+                    <ion-card-content>
+                      <img [src]="item.img"/>
+                    </ion-card-content>
+                  </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+      </ion-slides>
+</ion-content>
