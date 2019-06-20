@@ -14,15 +14,9 @@ export class IqraInfoPage implements OnInit {
   constructor(private route: ActivatedRoute) { 
     this.slides = [];
     for(let i = 0; i < 30; i++) {
-      if(i < 10){
-        this.slides.push({
-          img:"assets/image/letter/" + (i + 1) + ".PNG"
-        });
-      } else {
-        this.slides.push({
-          img:"assets/image/iqra.jpg"
-        });
-      }
+      this.slides.push({
+        img:"assets/image/letter/" + (i + 1) + ".PNG"
+      });
     }
   }
 

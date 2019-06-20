@@ -19,17 +19,10 @@ export class IqraPage implements OnInit {
           this.slides[s][a] = [];
           for(let i = 0; i < 2; i++){
             this.inc++;
-            if(this.inc < 11){
-              this.slides[s][a][i] = {
-                img:"assets/image/letter/" + this.inc + ".PNG",
-                url:"/iqra-info/" + this.inc
-              };
-            } else {
-              this.slides[s][a][i] = {
-                img:"assets/image/iqra.jpg",
-                url:"/iqra-info/1"
-              };
-            }
+            this.slides[s][a][i] = {
+              img:"assets/image/letter/" + this.inc + ".PNG",
+              url:"/iqra-info/" + this.inc
+            };
             //console.log(this.inc);
           }
         }
