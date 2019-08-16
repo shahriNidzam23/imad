@@ -10,14 +10,14 @@
   </ion-header>
 
 <ion-content>
-    <ion-slides pager="true" [options]="slideOpts">
+    <ion-slides pager="true" style="height: 100%;">
         <ion-slide *ngFor="let alph of slides">
-        <ion-grid>
+        <ion-grid style="margin-top: -20vh;">
             <ion-row *ngFor="let img of alph">
               <ion-col *ngFor="let item of img">
                   <ion-card [routerLink]="item.url">
                     <ion-card-content>
-                      <img [src]="item.img"/>
+                      <img [src]="item.img" class="card-height"/>
                     </ion-card-content>
                   </ion-card>
               </ion-col>

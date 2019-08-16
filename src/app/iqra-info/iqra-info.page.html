@@ -11,13 +11,25 @@
 
 <ion-content>
 
-    <ion-slides #alph pager="false" [options]="slideOpts">
+    <ion-slides #alph pager="false">
         <ion-slide *ngFor="let alph of slides">
           <ion-card>
             <ion-card-content>
-                <img [src]="alph.img"/>
+              <div class="div-image">
+                  <img [src]="alph.img" class="card-height"/>
+              </div>
                 <ion-card-subtitle>
-                  ALIF
+                    <div style="margin-top:5vh"></div>
+                  <div>
+                      <span *ngFor="let text of alph.text">
+                          {{text}} &nbsp;
+                        </span>
+                  </div>
+                  <div style="margin-top:10vh"></div>
+                  <audio controls preload="none">
+                    <source [src]="alph.sound" type="audio/mp4" />
+                    <p>Your browser does not support HTML5 audio.</p>
+                    </audio>
                 </ion-card-subtitle>
             </ion-card-content>
           </ion-card>
